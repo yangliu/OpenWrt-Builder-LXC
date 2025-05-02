@@ -166,7 +166,14 @@ config_package_add luci-app-autoreboot
 config_package_add curl
 config_package_add wget-ssl
 config_package_add openssh-sftp-server
-config_package_add luci-i18n-diskman-zh-cn
+config_package_add ca-bundle 
+config_package_add yq 
+config_package_add firewall4 
+config_package_add ip-full 
+config_package_add kmod-inet-diag 
+config_package_add kmod-nft-socket 
+config_package_add kmod-nft-tproxy 
+config_package_add kmod-tunconfig_package_add luci-i18n-diskman-zh-cn
 config_package_add luci-i18n-filebrowser-go-zh-cn
 config_package_add luci-app-argon-config
 config_package_add luci-i18n-argon-config-zh-cn
