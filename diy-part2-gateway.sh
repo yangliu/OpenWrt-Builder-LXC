@@ -163,25 +163,34 @@ config_package_add luci-app-autoreboot
 #config_package_add python3-base
 #config_package_add python3-pip
 
-# 第三方软件包
-mkdir -p package/custom
-git clone --depth 1  https://github.com/217heidai/OpenWrt-Packages.git package/custom
-clean_packages package/custom
-# golang
-rm -rf feeds/packages/lang/golang
-mv package/custom/golang feeds/packages/lang/
-# argon 主题
-config_package_add luci-theme-argon
-## passwall
-config_package_add luci-app-passwall
-config_package_add luci-app-passwall_Nftables_Transparent_Proxy
-config_package_del luci-app-passwall_Iptables_Transparent_Proxy
-config_package_del luci-app-passwall_INCLUDE_Shadowsocks_Libev_Client
-config_package_del luci-app-passwall_INCLUDE_Shadowsocks_Libev_Server
-config_package_del luci-app-passwall_INCLUDE_Shadowsocks_Rust_Client
-config_package_del luci-app-passwall_INCLUDE_Shadowsocks_Rust_Server
-config_package_del luci-app-passwall_INCLUDE_ShadowsocksR_Libev_Client
-config_package_del luci-app-passwall_INCLUDE_ShadowsocksR_Libev_Server
+config_package_add curl
+config_package_add wget-ssl
+config_package_add openssh-sftp-server
+config_package_add luci-i18n-diskman-zh-cn
+config_package_add luci-i18n-filebrowser-go-zh-cn
+config_package_add luci-app-argon-config
+config_package_add luci-i18n-argon-config-zh-cn
+config_package_add luci-i18n-ttyd-zh-cn
+
+# # 第三方软件包
+# mkdir -p package/custom
+# git clone --depth 1  https://github.com/217heidai/OpenWrt-Packages.git package/custom
+# clean_packages package/custom
+# # golang
+# rm -rf feeds/packages/lang/golang
+# mv package/custom/golang feeds/packages/lang/
+# # argon 主题
+# config_package_add luci-theme-argon
+# ## passwall
+# config_package_add luci-app-passwall
+# config_package_add luci-app-passwall_Nftables_Transparent_Proxy
+# config_package_del luci-app-passwall_Iptables_Transparent_Proxy
+# config_package_del luci-app-passwall_INCLUDE_Shadowsocks_Libev_Client
+# config_package_del luci-app-passwall_INCLUDE_Shadowsocks_Libev_Server
+# config_package_del luci-app-passwall_INCLUDE_Shadowsocks_Rust_Client
+# config_package_del luci-app-passwall_INCLUDE_Shadowsocks_Rust_Server
+# config_package_del luci-app-passwall_INCLUDE_ShadowsocksR_Libev_Client
+# config_package_del luci-app-passwall_INCLUDE_ShadowsocksR_Libev_Server
 
 # 镜像生成
 # 修改分区大小
