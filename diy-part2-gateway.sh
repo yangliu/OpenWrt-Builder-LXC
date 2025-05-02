@@ -200,6 +200,15 @@ config_package_add luci-i18n-ttyd-zh-cn
 # config_package_del luci-app-passwall_INCLUDE_ShadowsocksR_Libev_Client
 # config_package_del luci-app-passwall_INCLUDE_ShadowsocksR_Libev_Server
 
+# Add nikki
+mkdir -p package/custom
+git clone --depth 1 https://github.com/nikkinikki-org/OpenWrt-nikki.git package/custom
+clean_packages package/custom
+
+config_package_add nikki
+config_package_add luci-app-nikki
+config_package_add luci-i18n-nikki-zh-cn
+
 # 镜像生成
 # 修改分区大小
 sed -i "/CONFIG_TARGET_KERNEL_PARTSIZE/d" .config
