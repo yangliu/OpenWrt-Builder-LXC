@@ -1,4 +1,4 @@
-name: OpenWrt 24.10 Builder
+name: OpenWrt 24.10 rootfs Builder
 
 on:
   workflow_dispatch:
