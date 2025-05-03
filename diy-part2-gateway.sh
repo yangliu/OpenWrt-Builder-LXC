@@ -174,7 +174,8 @@ config_package_add ip-full
 config_package_add kmod-inet-diag 
 config_package_add kmod-nft-socket 
 config_package_add kmod-nft-tproxy 
-config_package_add kmod-tunconfig_package_add luci-i18n-diskman-zh-cn
+config_package_add kmod-tun
+config_package_add luci-i18n-diskman-zh-cn
 config_package_add luci-i18n-filebrowser-go-zh-cn
 config_package_add luci-app-argon-config
 config_package_add luci-i18n-argon-config-zh-cn
